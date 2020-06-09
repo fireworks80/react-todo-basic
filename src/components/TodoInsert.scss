@@ -1,0 +1,40 @@
+@mixin reset {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+.todo-insert {
+  display: flex;
+  background-color: #495057;
+  color: #fff;
+
+  input {
+    @include reset;
+    padding: .5rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: inherit;
+    flex: 1;
+
+    &::placeholder {
+      color: #dee2e6;
+    }
+  }
+
+  button {
+    @include reset;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    background-color: #868e96;
+    color: inherit;
+    transition: background .1s ease-in;
+
+    &:hover {
+      background-color: #adb5bd;
+    }
+  }
+}
